@@ -10,13 +10,16 @@ import RxSwift
 
 class DisposableVC: UIViewController {
 
+    // MARK : - IBOutlet
+    
     @IBOutlet weak var secLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
     
-    var count = 0.0
+    // MARK : - 변수
     
-    var timer : Timer?
-    var disposable : Disposable?
+    var count = 0.0 /// 50000000까지 카운트 할 변수
+    var timer : Timer? /// 타이머 변수
+    var disposable : Disposable? /// Disposable
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,7 @@ class DisposableVC: UIViewController {
         isCompletedCount() /// 50000000까지 카운트하면 라벨 텍스트 바꾸는 함수
     }
     
-    // MARK: - 타이머 시작하는 함수
+    // MARK: - 카운트와 타이머 시작하는 함수
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
