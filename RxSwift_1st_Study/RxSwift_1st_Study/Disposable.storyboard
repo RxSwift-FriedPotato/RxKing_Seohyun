@@ -38,6 +38,13 @@
                                     <action selector="stopBtn:" destination="ClR-vl-0xG" eventType="touchUpInside" id="6zh-cO-gtv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8q-Kk-oSN">
+                                <rect key="frame" x="186" y="473" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SQf-zb-fe1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,6 +52,7 @@
                     <connections>
                         <outlet property="completedLabel" destination="ZIW-Xb-bhY" id="8tW-Oh-V4v"/>
                         <outlet property="secLabel" destination="SzX-k9-WjD" id="hqa-ap-Dhr"/>
+                        <outlet property="secondSecLabel" destination="D8q-Kk-oSN" id="fZO-Ss-ssc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sup-8d-T4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

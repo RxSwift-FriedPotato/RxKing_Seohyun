@@ -14,6 +14,7 @@ class DisposableVC: UIViewController {
     
     @IBOutlet weak var secLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
+    @IBOutlet weak var secondSecLabel: UILabel!
     
     // MARK : - 변수
     
@@ -36,6 +37,7 @@ class DisposableVC: UIViewController {
     @objc func update() {
         count += 0.1
         secLabel.text = String(format: "%.1f", count) + String("초가 걸렸어요")
+        secondSecLabel.text = String(format: "%.1f", count) + String("초가 걸렸어요")
     }
     
     // MARK: - 카운트가 끝나면 라벨 텍스트 바꾸는 함수
