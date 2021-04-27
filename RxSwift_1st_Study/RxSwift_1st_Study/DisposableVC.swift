@@ -20,6 +20,7 @@ class DisposableVC: UIViewController {
     
     var count = 0.0 /// 50000000까지 카운트 할 변수
     var timer : Timer? /// 타이머 변수
+    var secondTimer : Timer?
     var disposable : Disposable? /// Disposable
     
     override func viewDidLoad() {
@@ -32,11 +33,16 @@ class DisposableVC: UIViewController {
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        secondTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(secondUpdate), userInfo: nil, repeats: true)
     }
     
     @objc func update() {
         count += 0.1
         secLabel.text = String(format: "%.1f", count) + String("초가 걸렸어요")
+    }
+    
+    @objc func secondUpdate() {
+        count += 0.1
         secondSecLabel.text = String(format: "%.1f", count) + String("초가 걸렸어요")
     }
     
@@ -79,5 +85,8 @@ class DisposableVC: UIViewController {
         disposable?.dispose()
         timer?.invalidate()
         completedLabel.text = "취소되었습니다"
+    }
+    
+    @IBAction func secondStopBtn(_ sender: Any) {
     }
 }
